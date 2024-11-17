@@ -11,7 +11,7 @@ class TPOProfileSerializer(serializers.ModelSerializer):
         model = TPOProfile
         fields = '__all__'
         
-class CompanyProileSerializer(serializers.ModelSerializer):
+class CompanyProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = CompanyProfile
         fields = '__all__'
