@@ -1,5 +1,6 @@
 from django.db import models
-from authentication.models import CompanyProfile, Skill
+from profiles.models import CompanyProfile
+from skills.models import Skill
 from .enums import JobType
 
 # Create your models here.

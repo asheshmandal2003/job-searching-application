@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'eligibility',
     'jobs',
     'search',
+    'skills',
+    'profiles',
     'rest_framework',
     'rest_framework_simplejwt',
 ]
