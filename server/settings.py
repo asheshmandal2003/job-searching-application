@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'search',
     'skills',
     'profiles',
+    'job_recommendations',
     'rest_framework',
     'rest_framework_simplejwt',
 ]
