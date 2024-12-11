@@ -26,8 +26,6 @@ class User(AbstractBaseUser, PermissionsMixin):
         choices=UserRole.choices(),  
         default=UserRole.STUDENT.value,
     )
-    first_name = models.CharField(max_length=100, blank=True)
-    last_name = models.CharField(max_length=100, blank=True)
     password = models.CharField(max_length=255, blank=False)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)

@@ -7,7 +7,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 class RegistrationSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'email', 'password', 'role']
+        fields = ['email', 'password', 'role']
 
     def create(self, validated_data):
         validated_data['password'] = make_password(validated_data['password'])
@@ -33,8 +33,6 @@ class LoginSerializer(serializers.Serializer):
             'access': str(refresh.access_token),
             'user': {
                 'id': user.id,
-                'first_name': user.first_name,
-                'last_name': user.last_name,
                 'email': user.email,
                 'role': user.role
             }
