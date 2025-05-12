@@ -1,7 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .utils import recommend_jobs_knn
+from .utils import recommend_jobs_tfidf
 from profiles.models import StudentProfile
 from jobs.serializers import JobSerializer
 
@@ -18,7 +18,7 @@ class JobRecommendationsView(APIView):
         if not profile:
             return Response({"error": "Profile not found"}, status=status.HTTP_404_NOT_FOUND)
         
-        recommendations = recommend_jobs_knn(profile)
+        recommendations = recommend_jobs_tfidf(profile)
         return Response(
             [
                 {
